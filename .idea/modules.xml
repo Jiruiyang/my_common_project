@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/my_common_project.iml" filepath="$PROJECT_DIR$/my_common_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_base/system/system_base.iml" filepath="$PROJECT_DIR$/system/system_base/system/system_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_common/system_common.iml" filepath="$PROJECT_DIR$/system/system_common/system_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_repository/system_repository.iml" filepath="$PROJECT_DIR$/system/system_repository/system_repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_service/system_service.iml" filepath="$PROJECT_DIR$/system/system_service/system_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_service_intf/system_service_intf.iml" filepath="$PROJECT_DIR$/system/system_service_intf/system_service_intf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/system/system_web/system_web.iml" filepath="$PROJECT_DIR$/system/system_web/system_web.iml" />
+    </modules>
+  </component>
+</project>
