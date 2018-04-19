@@ -1,10 +1,13 @@
-package com.system.atom.dao;
+package com.system.atom.mapper.system;
 
-import com.system.atom.bean.User;
+import com.github.pagehelper.Page;
+import com.system.atom.bean.system.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 
 /**
@@ -20,5 +23,11 @@ public interface UserMapper
 
     @Insert("INSERT INTO SC_USER(NAME, PASSWORD, PHONE) VALUES(#{name}, #{password}, #{phone})")
     int insert(@Param("name") String name, @Param("password") String password, @Param("phone") String phone);
+
+    @Select("SELECT * FROM SC_USER")
+    List<User> findAll();
+
+    @Select("SELECT * FROM SC_USER")
+    Page<User> findByPage(int pageNum,int pageSize);
 
 }

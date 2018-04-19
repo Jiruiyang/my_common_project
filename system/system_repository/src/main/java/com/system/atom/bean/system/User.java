@@ -1,4 +1,4 @@
-package com.system.atom.bean;
+package com.system.atom.bean.system;
 
 /**
  * @description：user

@@ -1,12 +1,14 @@
 package com;
 
+import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageInfo;
 import com.system.BaseApplicationTest;
-import com.system.atom.bean.User;
-import com.system.atom.dao.UserMapper;
+import com.system.atom.bean.system.User;
 import com.system.service.intf.UserService;
-import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * @description：
@@ -36,11 +38,27 @@ public class UserTest extends BaseApplicationTest
     @Test
     public void addUserTest()
     {
-        User user = new User();
-        user.setName("杨济瑞");
-        user.setPassword("123456");
-        user.setPhone("18795997581");
-        int res = userService.addUser(user);
-        logger.info("res = " + res);
+        for (int i = 0; i < 10; i++)
+        {
+            User user = new User();
+            user.setName("小明" + i);
+            user.setPassword("123456");
+            user.setPhone("1879599760" + i);
+            int res = userService.addUser(user);
+            logger.info("res = " + res);
+        }
+    }
+
+    @Test
+    public void findAlltest()
+    {
+        logger.info(userService.findAll());
+    }
+
+    @Test
+    public void findByPageTest()
+    {
+        PageInfo<User> pageInfo = userService.findByPage(3,10);
+        logger.info(JSON.toJSONString(pageInfo.getList()));
     }
 }
