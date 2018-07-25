@@ -1,6 +1,7 @@
 package com;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageInfo;
 import com.system.BaseApplicationTest;
 import com.system.atom.bean.system.User;
@@ -58,7 +59,8 @@ public class UserTest extends BaseApplicationTest
     @Test
     public void findByPageTest()
     {
-        PageInfo<User> pageInfo = userService.findByPage(3,10);
-        logger.info(JSON.toJSONString(pageInfo.getList()));
+//        PageInfo<User> pageInfo = userService.findByPage(3,10);
+//        logger.info(JSON.toJSONString(pageInfo.getList()));
+        System.out.println(JSONObject.parseObject(null));
     }
 }

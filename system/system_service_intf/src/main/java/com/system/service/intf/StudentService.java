@@ -25,4 +25,6 @@ public interface StudentService
      * @return
      */
     int addStudent(Student student);
+
+    int selectMaxAge();
 }

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Calendar;
 
 /**
  * @description：项目测试
@@ -30,7 +31,7 @@ public class TestController extends BaseController
     {
         logger.info("这个是hello");
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("name", "222");
+        modelAndView.addObject("name1", "222");
         modelAndView.setViewName("hello");
         return modelAndView;
     }
@@ -45,10 +46,11 @@ public class TestController extends BaseController
     @ResponseBody
     public Object findUser(ModelMap modelMap, HttpServletRequest request) throws MyException
     {
-        User user = userService.findUserByPhone("18795997581");
+        User user = userService.findUserByPhone("18795997600");
         WebResult webResult = new WebResult();
         webResult.ok().setData(user);
         return webResult;
     }
+
 
 }

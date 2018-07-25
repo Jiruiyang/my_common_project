@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/cas/cas_base/cas_base.iml" filepath="$PROJECT_DIR$/cas/cas_base/cas_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cas/cas_service/cas_service.iml" filepath="$PROJECT_DIR$/cas/cas_service/cas_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cas/cas_service_intf/cas_service_intf.iml" filepath="$PROJECT_DIR$/cas/cas_service_intf/cas_service_intf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cas/cas_web/cas_web.iml" filepath="$PROJECT_DIR$/cas/cas_web/cas_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/my_common_project.iml" filepath="$PROJECT_DIR$/my_common_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/system/system_base/system/system_base.iml" filepath="$PROJECT_DIR$/system/system_base/system/system_base.iml" />
       <module fileurl="file://$PROJECT_DIR$/system/system_common/system_common.iml" filepath="$PROJECT_DIR$/system/system_common/system_common.iml" />

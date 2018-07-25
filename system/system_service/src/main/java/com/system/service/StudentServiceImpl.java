@@ -39,6 +39,13 @@ public class StudentServiceImpl implements StudentService
     @Override
     public int addStudent(Student student)
     {
-        return studentMapper.insert(student.getName(), student.getSex(), student.getAge());
+
+        return studentMapper.insert(student.getName(), student.getSex(), selectMaxAge()+"");
+    }
+
+    @Override
+    public int selectMaxAge()
+    {
+        return studentMapper.selectMaxAge();
     }
 }

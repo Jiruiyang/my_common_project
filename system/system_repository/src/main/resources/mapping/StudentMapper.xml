@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--你接口的包名是com.abc.dao,接口名是NameMapper.java，那么你的mapper.xml的namespace应该是com.abc.dao.NameMapper-->
+<mapper namespace="com.system.atom.mapper.param.StudentMapper" >
+
+    <!--resultMap对应的是表与实体类的映射  - type 数据库表对应的实体类，别名或完整类名都可以-->
+    <resultMap id="StudentResultMap" type="com.system.atom.bean.param.Student" >
+        <!-- 结果集的主键 -->
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <!-- 普通的列  -column 是数据库中字段， property是实体类中字段-->
+        <result column="id" property="id" jdbcType="BIGINT" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="sex" property="sex" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <!--parameterType(输入类型)、resultType(输出类型)-->
+    <select id="findStudentByName" parameterType="java.lang.String" resultType="com.system.atom.bean.param.Student">
+        SELECT * FROM SC_STUDENT WHERE NAME = #{name}
+    </select>
+
+    <!--&lt;!&ndash;parameterType(输入类型)、resultType(输出类型)&ndash;&gt;-->
+    <!--<select id="findStudentListByName" parameterType="java.util.List" resultMap="StudentResultMap" resultType="com.system.atom.bean.param.Student">-->
+        <!--SELECT * FROM SC_STUDENT WHERE NAME IN #{nameList}-->
+    <!--</select>-->
+
+    <!--<insert id="insert" >-->
+        <!--INSERT INTO SC_STUDENT(NAME, SEX, AGE) VALUES(#{name}, #{sex}, #{age})-->
+    <!--</insert>-->
+
+    <!--<insert id="selectMaxAge">-->
+        <!--SELECT MAX(age)+1 age FROM SC_STUDENT-->
+    <!--</insert>-->
+
+</mapper>

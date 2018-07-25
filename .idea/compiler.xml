@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cas_service" />
+        <module name="cas_service_intf" />
+        <module name="cas_web" />
         <module name="system_common" />
         <module name="system_repository" />
         <module name="system_service" />
@@ -14,6 +17,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cas_base" target="1.8" />
+      <module name="cas_service" target="1.8" />
+      <module name="cas_service_intf" target="1.8" />
+      <module name="cas_web" target="1.7" />
       <module name="system_base" target="1.8" />
       <module name="system_common" target="1.8" />
       <module name="system_repository" target="1.8" />

@@ -7,6 +7,9 @@ import com.system.service.intf.StudentService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * @description：
  * @author：yangjr
@@ -14,6 +17,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class StudentTest extends BaseApplicationTest
 {
+
+    ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
 
     @Autowired
     StudentService studentService;
@@ -38,7 +43,6 @@ public class StudentTest extends BaseApplicationTest
         Student student = new Student();
         student.setName("xiao瑞");
         student.setSex("male");
-        student.setAge("18");
         int res = studentService.addStudent(student);
         logger.info("res = " + res);
     }

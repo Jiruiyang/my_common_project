@@ -1,5 +1,7 @@
 mybatis:
   mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.system.atom.bean
+  config-location: classpath:mybatis-config.xml
 
 #pagehelper分页插件
 pagehelper:

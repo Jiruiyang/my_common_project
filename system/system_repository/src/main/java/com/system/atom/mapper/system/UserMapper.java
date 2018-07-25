@@ -21,7 +21,7 @@ public interface UserMapper
     @Select("SELECT * FROM SC_USER WHERE PHONE = #{phone}")
     User findUserByPhone(@Param("phone") String phone);
 
-    @Insert("INSERT INTO SC_USER(NAME, PASSWORD, PHONE) VALUES(#{name}, #{password}, #{phone})")
+    @Insert("INSERT INTO SC_USER(ID,NAME, PASSWORD, PHONE) VALUES(nextval('user_id_seq'),#{name}, #{password}, #{phone})")
     int insert(@Param("name") String name, @Param("password") String password, @Param("phone") String phone);
 
     @Select("SELECT * FROM SC_USER")

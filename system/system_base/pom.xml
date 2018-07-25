@@ -213,6 +213,10 @@
 					<exclude>dev/**</exclude>
 					<exclude>prod/**</exclude>
 				</excludes>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
 			</resource>
 			<resource>
 				<directory>${basedir}/src/main/resources/${profiles.active}</directory>
