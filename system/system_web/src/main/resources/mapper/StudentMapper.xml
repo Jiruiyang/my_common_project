@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.system.atom.mapper.param.StudentMapper" >
+
+    <resultMap id="StudentResultMap" type="com.system.atom.bean.param.Student" >
+        <id column="ID" property="id" jdbcType="INTEGER" />
+        <result column="NAME" property="name" jdbcType="VARCHAR" />
+        <result column="SEX" property="sex" jdbcType="VARCHAR" />
+        <result column="AGE" property="age" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <select id="findStudentByName" parameterType="java.lang.String" resultType="com.system.atom.bean.param.Student">
+        SELECT * FROM SC_STUDENT WHERE NAME = #{name}
+    </select>
+
+    <select id="findStudentListByName" parameterType="java.util.List" resultType="com.system.atom.bean.param.Student">
+        SELECT * FROM SC_STUDENT WHERE NAME IN #{nameList}
+    </select>
+
+    <insert id="insert" >
+        INSERT INTO SC_STUDENT(NAME, SEX, AGE) VALUES(#{name}, #{sex}, #{age})
+    </insert>
+
+    <insert id="selectMaxAge">
+        SELECT MAX(age)+1 AGE FROM SC_STUDENT
+    </insert>
+
+</mapper>

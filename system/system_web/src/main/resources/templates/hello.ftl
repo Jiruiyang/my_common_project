@@ -14,11 +14,11 @@
         $("#button1").click(function () {
             $.ajax({
                 type: "POST",
-                url: "/sysman/user/findUser",
+                url: "/system/user/findStudent",
                 data: "",
                 success: function (data) {
-                    alert(1);
-                    console.log(data);
+                    var exportPath = window.location.protocol + "//" + window.location.host + "/system";
+                    window.location.href = exportPath + "/user/export";
                 },
                 fail: function (data) {
                     alert(2);
